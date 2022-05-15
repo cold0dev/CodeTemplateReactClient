@@ -1,3 +1,25 @@
 .App {
-  
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.sz {
+    font-size: 1.3rem !important;
+}
+
+nav {
+    display: flex;
+}
+
+nav .btn {
+    margin: 1rem;
+}
+
+.max {
+    width: 100%;
+}
+
+.m-top {
+    margin-top: 1rem;
 }
