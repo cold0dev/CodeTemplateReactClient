@@ -4,12 +4,17 @@
   padding: 1rem;
 }
 
+.AppBody {
+    width: 70%;
+}
+
 .sz {
     font-size: 1.3rem !important;
 }
 
 nav {
     display: flex;
+    justify-content: center;
 }
 
 nav .btn {
@@ -22,4 +27,12 @@ nav .btn {
 
 .m-top {
     margin-top: 1rem;
+}
+
+.Find {
+    width: 100%;
+}
+
+.NameBox {
+    width: 100%;
 }
