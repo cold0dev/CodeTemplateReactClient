@@ -1,31 +1,37 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Add from "./components/Add";
+import Find from "./components/Find";
+import Button from "react-bootstrap/Button";
+import { useState } from "react";
 
-import Add from './components/Add';
+function Switch(props){
+  let path = props.path;
+
+  switch (path){
+    case "/add":
+      return (
+        <div><Add></Add></div>
+      )
+    default:
+      return (
+        <div><Find></Find></div>
+      )
+  }
+}
 
 function App() {
+  const [path,setPath] = useState("/");
+
   return (
     <div className="App">
-      <Router>
-        <div>
+        <div className="AppBody">
           <nav>
-            <Link className="btn btn-primary sz" to="/">Find</Link>
-            <Link className="btn btn-primary sz" to="/add">Add</Link>
+            <Button onClick={() => {setPath("/")}} className="sz">Find</Button>
+            <Button onClick={() => {setPath("/add")}} className="sz">Add</Button>
           </nav>
-
-          <Switch>
-            <Route path="/">
-              <Add />
-            </Route>
-          </Switch>
+            <Switch path={path}></Switch>
         </div>
-    </Router>
     </div>
   );
 }
