@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 import postData from "../PostData";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 async function addTemplate(name,code){
     if (name === "" || code === "")return;
@@ -16,10 +16,10 @@ function Add(){
     return (
         <div>
         <h3>Name:</h3>
-        <input className="m-top" onChange={() => {setTemplateName(document.getElementById("tName").value)}} type="text" id="tName"></input>
+        <input className="m-top NameBox" onChange={() => {setTemplateName(document.getElementById("tName").value)}} type="text" id="tName"></input>
         <br></br>
         <h3 className="m-top">Code:</h3>
-        <textarea className="m-top" onChange={() => {setTemplateCode(document.getElementById("tCode").value)}} id="tCode"></textarea>
+        <textarea className="m-top NameBox" onChange={() => {setTemplateCode(document.getElementById("tCode").value)}} id="tCode"></textarea>
         <br></br>
         <Button className="sz max m-top" onClick={() => {addTemplate(templateName,templateCode)}}>Send</Button>
         </div>
