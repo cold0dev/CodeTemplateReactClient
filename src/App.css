@@ -29,6 +29,13 @@ nav .btn {
     margin-top: 1rem;
 }
 
+.Trash {
+    position: relative;
+    margin-left: 1rem;
+    width: 1rem;
+    height: 1rem;    
+}
+
 .Find {
     width: 100%;
 }
